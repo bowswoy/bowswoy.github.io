@@ -164,6 +164,27 @@ $(function(){
 		add_image_to_canvas($(this).attr('src'));
 	});
 
+  $('#upload_image').change(function handleImage(e) {
+		$('#image_detail').show();
+	    var reader = new FileReader();
+	    reader.onload = function (event) {
+	        var imgObj = new Image();
+	        imgObj.src = event.target.result;
+	        imgObj.onload = function () {
+	            var image = new fabric.Image(imgObj, {
+	            	id : 'image-' + count_image,
+	            });
+	            // image.set({});
+	            image.scale(0.3);
+	            canvas.add(image);
+	            canvas.setActiveObject(image);
+	            count_image++;
+	        }
+	    }
+	    reader.readAsDataURL(e.target.files[0]);
+	    $(this).val('');
+	});
+
   // var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
   // $('.save').attr({
   //     'download': 'YourProduct.png',  /// set filename
