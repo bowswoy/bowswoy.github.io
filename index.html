@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="สร้างคำคมออนไลน์ง่ายๆ ไม่ต้องลงโปรแกรมใดๆ โดยสามารถตกแต่งคำต่างๆ ผ่านหน้าเว็บไซต์และดาวน์โหลดมาเก็บไว้ใช้งานได้ฟรี">
-    <meta name="author" content="bowswoy">
+    <meta name="description" content="">
+    <meta name="author" content="">
     <title>สร้างคำคมออนไลน์ ป้ายคำคมออนไลน์ กลอนสั้นๆ คำคม สวัสดีตอนเช้า</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -160,16 +160,7 @@
             <div class="col-sm-8">
               <label for="emoji">สติ๊กเกอร์/รูปประกอบ</label>
               <div id="emoji" class="choose-image-pic">
-			  <?php
-				if ($handle = opendir('img/sticker')) {
-					while (false !== ($entry = readdir($handle))) {
-						if ($entry != "." && $entry != "..") {
-							echo '<img src="img/sticker/', $entry,'" alt="รูปตกแต่งคำคม" class="img-rounded">';
-						}
-					}
-					closedir($handle);
-				}
-			  ?>
+			  <img src="img/sticker/angry.png" alt="รูปตกแต่งคำคม" class="img-rounded"><img src="img/sticker/haha.png" alt="รูปตกแต่งคำคม" class="img-rounded"><img src="img/sticker/like.png" alt="รูปตกแต่งคำคม" class="img-rounded"><img src="img/sticker/love.png" alt="รูปตกแต่งคำคม" class="img-rounded"><img src="img/sticker/sad.png" alt="รูปตกแต่งคำคม" class="img-rounded"><img src="img/sticker/wow.png" alt="รูปตกแต่งคำคม" class="img-rounded"><img src="img/sticker/ya.png" alt="รูปตกแต่งคำคม" class="img-rounded">
 			 </div>
               <label for="upload_image">เพิ่มรูปภาพเอง
   	 						<input type="file" name="upload_image" id="upload_image" class="custom-file-upload">
